@@ -30,7 +30,7 @@ const PROMPTS = {
 - 时长建议
 - 每镜的多模型Prompt矩阵（Midjourney/Nano Banana/Seedance/Kling）
 
-输出格式为Markdown表格，每镜一行。`,
+最多生成60个分镜，确保完整覆盖整个剧本。输出格式为Markdown表格，每镜一行。`,
     userTemplate: (input) => `请将以下剧本转化为分镜脚本表：\n\n${input}`
   },
 

@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         model: 'Minimax-M2.7',
-        max_tokens: 8192,
+        max_tokens: 32000,
         stream: true,
         messages: [{ role: 'user', content: prompt }]
       })
