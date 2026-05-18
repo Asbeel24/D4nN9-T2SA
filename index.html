@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D4nN9 T2SA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo">D4nN9 T2SA</div>
+      <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+    </header>
+
+    <nav class="tab-bar">
+      <button class="tab active" data-mode="script">剧本生成</button>
+      <button class="tab" data-mode="storyboard">分镜脚本</button>
+      <button class="tab" data-mode="prompt">图像提示词</button>
+    </nav>
+
+    <main class="main">
+      <section class="panel input-panel">
+        <div class="panel-header">
+          <h2>输入</h2>
+        </div>
+        <div class="panel-body">
+          <textarea id="inputArea" class="input-textarea" placeholder="输入你的创意素材..."></textarea>
+          <div class="api-config">
+            <input type="password" id="apiKey" placeholder="使用默认Key（可填写自己的）" class="api-key-input">
+          </div>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-primary" id="generateBtn">生成</button>
+        </div>
+      </section>
+
+      <section class="panel output-panel">
+        <div id="progressBar" class="progress-bar" style="display: none;">
+          <div class="progress-fill"></div>
+        </div>
+        <div class="panel-header">
+          <h2>输出</h2>
+        </div>
+        <div class="panel-body">
+          <div id="outputArea" class="output-content"></div>
+          <div id="emptyState" class="empty-state">
+            <p>生成的內容將顯示在這裡</p>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-secondary" id="copyBtn">複製</button>
+          <button class="btn btn-secondary" id="exportBtn">導出</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/prompts.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
