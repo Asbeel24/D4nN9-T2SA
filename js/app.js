@@ -77,7 +77,7 @@ class D4nN9T2SA {
 
     try {
       const fullPrompt = `${config.system}\n\n${userPrompt}`;
-      const result = await API.call(fullPrompt, this.apiKey, null, (chunk) => {
+      const result = await API.call(fullPrompt, this.apiKey, (chunk) => {
         this.showOutput(chunk);
       });
       this.showOutput(result);
